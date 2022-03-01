@@ -1,0 +1,40 @@
+#article article.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+#article article {
+    background-color: rgba(27, 31, 34, 0.85);
+    position: relative;
+    width: 45vw;
+    height: 89vh;
+    max-width: 100%;
+    border-radius: 8px;
+    left: 27.5vw;
+    top: 5vh;
+    overflow: auto;
+}
+
+#article article::-webkit-scrollbar {
+    width: 0 !important
+}
+
+#article article .close {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    top: 2.5%;
+    left: 94%;
+}
+
+#article article .close .btncross {
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+#article article .close a .cross {
+    position: relative;
+    width: 20px;
+    height: 20px;
+}

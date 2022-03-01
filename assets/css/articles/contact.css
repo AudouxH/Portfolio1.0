@@ -1,0 +1,104 @@
+#article article form {
+    position: relative;
+    width: 100%;
+    top: 30px;
+}
+
+#article article form h1 {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 3%;
+    color: white;
+    font-size: 35px;
+    font-family: title_page;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+.enter {
+    position: relative;
+    width: 70%;
+    left: 15%;
+    padding: 1% 0% 1% 1%;
+    margin-top: 5%;
+    background-color: rgba(27, 31, 34, 0);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    border: 1px solid white;
+}
+
+#textarea {
+    position: relative;
+    width: 70%;
+    left: 15%;
+    padding: 1% 0% 1% 1%;
+    margin-top: 6%;
+    background-color: rgba(27, 31, 34, 0);
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    border: 1px solid white;
+}
+
+#submit-form {
+    position: relative;
+    width: 30%;
+    left: 35%;
+    padding: 1% 0% 1% 0%;
+    border-radius: 5px;
+    margin-top: 6%;
+    background-color: rgba(27, 31, 34, 0);
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    border: 1px solid white;
+}
+
+#linkedin {
+    position: relative;
+    width: 50px;
+    top: 90px;
+    left: 25%;
+    margin-bottom: 150px;
+}
+
+#github {
+    position: relative;
+    width: 50px;
+    top: -55px;
+    left: 45%;
+}
+
+#insta {
+    position: relative;
+    width: 50px;
+    top: -55px;
+    left: 55%;
+}
+
+#malt {
+    position: relative;
+    width: 50px;
+    top: -55px;
+    left: 35%;
+}
+
+input::placeholder {
+    color: white;
+}
+
+textarea::placeholder {
+    color: white;
+}
+
+input:focus {
+    outline: 0;
+}
+
+textarea:focus {
+    outline: 0;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Audouxh.com</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="./assets/css/menu.css">
+    <link rel="stylesheet" href="./assets/css/articles.css">
+    <link rel="stylesheet" href="./assets/css/articles/about.css">
+    <link rel="stylesheet" href="./assets/css/articles/contact.css">
+    <link rel="stylesheet" href="./assets/css/articles/work.css">
+    <link rel="stylesheet" href="assets/css/articles/rates.css">
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assets/js/menu.js"></script>
+    <script src="./assets/js/articles.js"></script>
+    <script src="./assets/js/articles/about.js"></script>
+    <script src="./assets/js/articles/contact.js"></script>
+    <script src="./assets/js/articles/work.js"></script>
+    <script src="./assets/js/articles/rates.js"></script>
+</head>
+
+<body>
+    <div id="background"></div>
+    <div id="main">
+        <header id="header">
+            <h1>Hugo Audoux</h1>
+            <h2>Web and mobile application developer</h2>
+        </header>
+        <div id="menu">
+            <ul>
+                <li>
+                    <a href="#" id="Btn_about">About</a>
+                </li>
+                <li>
+                    <a href="#" id="Btn_work">Work</a>
+                </li>
+                <li>
+                    <a href="#" id="Btn_rates">Rates</a>
+                </li>
+                <li>
+                    <a href="#" id="Btn_contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="article">
+        <article id="About" style="display: none;">
+            <div class="close">
+                <a href="#" class="btncross"><img src="./images/cross_white.png" alt="cross close" class="cross"></a>
+            </div>
+            <img src="./images/picture_me.jpg" alt="Hugo Audoux" id="Picture_profile" class="">
+            <p id="description_paragraphe">
+                Salut, moi c'est Hugo ! <br>
+                J'ai 20 ans et je suis en 2e année à Epitech Lyon. <br>
+                Passionné d'informatique depuis plus de 4 ans, j'ai approfondi durant ma première et ma deuxieme années mes connaissances dans les languages de developpement web et de programmes embarqués. <br>
+                Grâce aux techniques d'apprentissage de mon école, j'ai développé mon autonomie au travail et mon organisation en général. <br>
+            </p>
+            <a href="./images/CV.pdf" target="_blank" id="link_cv">>> Ouvrir mon Curriculum Vitae <<</a>
+        </article>
+        
+        <article id="Work" style="display: none;">
+            <div class="close">
+                <a href="#" class="btncross"><img src="./images/cross_white.png" alt="cross close" class="cross"></a>
+            </div>
+            <a href="https://cagetteviolette.fr" class="work_template" id="cagetteviolette" target="_blank">
+                <img src="./images/cagette_violette_screen.png" alt="cagetteviolette.fr">
+            </a>
+            <a href="https://youtube.com" class="work_template" id="Lyra" target="_blank">
+                <img src="./images/" alt="screen cagette violette">
+                <div class="work_description">
+                    <p></p>
+                    <a href=""></a>
+                </div>
+            </a>
+        </article>
+        
+        <article id="Rates" style="display: none;">
+            <div class="close">
+                <a href="#" class="btncross"><img src="./images/cross_white.png" alt="cross close" class="cross"></a>
+            </div>
+            <a href="LandingPage.html" target="_blank">
+                <img src="./images/LandingPage_flyers.png" alt="Flyers LandingPages" id="LandingPage_flyers">
+            </a>
+        </article>
+        
+        <article id="Contact" style="display: none;">
+            <div class="close">
+                <a href="#" class="btncross"><img src="./images/cross_white.png" alt="cross close" class="cross"></a>
+            </div>
+            <form id="test-form">
+                <h1>Contact</h1>
+                <input name="nom" type="text" class="enter" placeholder="Name/Surname" id="name">
+                <input name="email" type="email" class="enter" placeholder="E-mail" id="email">
+                <textarea value="message" name="message" id="textarea" cols="30" rows="10" placeholder="Message"></textarea>
+                <button type="submit" id="submit-form" name="envoyer" >Envoyer</button>
+            </form>
+            <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+            <script type="text/javascript" src="./assets/js/articles/jquery.serializeObject.min.js"></script>
+            <script type="text/javascript">
+                var $form = $('form#test-form'),
+                    url = 'https://script.google.com/macros/s/AKfycbzJ0KOftIgjbqbHd9BZlVUzoVvI5WSz7uF11UmfeKjWiq0NTWM/exec';
+                
+                $('#submit-form').on('click', function(e) {
+                  e.preventDefault();
+                  var jqxhr = $.ajax({
+                    url: url,
+                    method: "GET",
+                    dataType: "json",
+                    data: $form.serializeObject()
+                  }).done(function(){
+                        alert("votre message a bien etait envoyer !");
+                        document.getElementById('test-form').reset();
+                    });
+                });
+                </script>
+            <a href="https://www.linkedin.com/in/hugo-audoux" target="_blank"><img id="linkedin" src="./images/linkedin.png" alt="icon linkedin"></a>
+            <a href="https://www.malt.fr/profile/hugoaudoux" target="_blank"><img id="malt" src="./images/malt.png" alt="icon malt"></a>
+            <a href="https://github.com/AudouxH" target="_blank"><img id="github" src="./images/github.png" alt="icon github"></a>
+            <a href="https://www.instagram.com/audouxh/" target="_blank"><img id="insta" src="./images/insta_icon.png" alt="icon instagram"></a>
+        </article>
+    
+    </div>
+    
+</body>
+
+</html>
